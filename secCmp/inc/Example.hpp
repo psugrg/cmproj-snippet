@@ -8,16 +8,15 @@ namespace example
  */
 class Example
 {
-    public:
-    Example(const int& a);
+public:
+  Example(const int& a);
 
-    int getA();
+  int getA();
 
-    private:
-    int m_a;
+private:
+  int m_a;
 };
-    
-} // namespace intExample
 
+}  // namespace example
 
-#endif // __INTEXAMPLE_HPP
+#endif  // __INTEXAMPLE_HPP

@@ -2,13 +2,13 @@
 
 namespace example
 {
-   Example::Example(const int& a)
-   {
-       m_a = a;
-   } 
+Example::Example(const int& a)
+{
+  m_a = a;
+}
 
-   int Example::getA()
-   {
-       return m_a;
-   }
-} // namespace intExample
+int Example::getA()
+{
+  return m_a;
+}
+}  // namespace example
