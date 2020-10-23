@@ -9,6 +9,9 @@ int main(void)
 
   example::Example a(10);
 
-  std::cout << "Var: " << a.getA() << std::endl;
+  // Static analysis demo:
+  char tmp[10] = "test";
+  tmp[11] = 's';
+  std::cout << tmp << std::endl;
   return 0;
 }

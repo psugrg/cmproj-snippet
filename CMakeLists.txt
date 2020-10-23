@@ -7,6 +7,13 @@ project(cmproj VERSION 0.1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
+# Have cmake create a compile database
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# Static analysis done by CPP Check
+add_custom_target(cppcheck-analysis 
+        COMMAND cppcheck --project=compile_commands.json)
+
 # Compile options
 # TODO: Add more!
 add_compile_options("-Wall" "-Wextra" "-Wuninitialized" "-pedantic" "-Werror")
