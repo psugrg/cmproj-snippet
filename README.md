@@ -2,7 +2,15 @@
 My very basic CMake project snippet
 
 ## Development Environment
-TODO: Fill this section.
+  - Development environment: https://github.com/psugrg/saden
+  - Build system CMake
+  - Code Formatting using Clang Format
+  - Static analysis: CppCheck
+  - Testing using Google Test framework
+### TODO
+  - Documentation: Doxygen
+  - memory leaks detection
+
 
 ## Clang Format
 Code formatting is based on `clang-format` using the `./.clang-format` file.

@@ -12,7 +12,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Static analysis done by CPP Check
 add_custom_target(cppcheck-analysis 
-        COMMAND cppcheck --project=compile_commands.json)
+        COMMAND cppcheck --template=gcc -i/usr/src/googletest --project=compile_commands.json)
 
 # Compile options
 # TODO: Add more!
