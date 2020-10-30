@@ -11,8 +11,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Static analysis done by CPP Check
-add_custom_target(cppcheck-analysis 
-        COMMAND cppcheck --template=gcc -i/usr/src/googletest --project=compile_commands.json)
+add_custom_target(cppcheck-analysis ALL
+        COMMAND cppcheck 
+                --template=gcc 
+                -i/usr/src/googletest 
+                --project=compile_commands.json)
 
 # Compile options
 # TODO: Add more!
