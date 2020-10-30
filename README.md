@@ -7,8 +7,8 @@ My very basic CMake project snippet
   - Code Formatting using Clang Format
   - Static analysis: CppCheck
   - Testing using Google Test framework
-### TODO
   - Documentation: Doxygen
+### TODO
   - memory leaks detection
 
 
