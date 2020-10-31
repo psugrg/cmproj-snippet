@@ -9,6 +9,11 @@ namespace example
 class Example
 {
 public:
+  /**
+   * @brief Construct a new Example object
+   *
+   * @param a integer parameter
+   */
   Example(const int& a);
 
   int getA();
