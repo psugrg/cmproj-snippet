@@ -3,6 +3,9 @@ cmake_minimum_required(VERSION 3.10)
 # Project name
 project(cmproj VERSION 0.1.0)
 
+# Set the name for the executable
+set(app_name ${PROJECT_NAME})
+
 # C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)

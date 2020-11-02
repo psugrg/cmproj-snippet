@@ -8,8 +8,14 @@ My very basic CMake project snippet
   - Static analysis: CppCheck
   - Testing using Google Test framework
   - Documentation: Doxygen
-### TODO
   - memory leaks detection
+### In Progress
+  - installation
+  Installation kind of work. The problem is that it also install tests together with the googletest framework. 
+### TODO
+  - code coverage
+  - packages
+  - flatpacs/appimages/etc
 
 
 ## Clang Format
