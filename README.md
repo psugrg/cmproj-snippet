@@ -10,7 +10,8 @@ My very basic CMake project snippet
   - Documentation: Doxygen
   - memory leaks detection
 ### In Progress
-  - installation
+  - installation.
+
   Installation kind of work. The problem is that it also install tests together with the googletest framework. 
 ### TODO
   - code coverage
