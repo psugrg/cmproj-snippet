@@ -33,21 +33,24 @@ Run `sudo apt install clang-format` on debian-like distributions.
 Hit `Ctrl+Shift+P` and search for `Open User Settings`.
 Search for `format` and select `Editor: Format On Save`.
 
-### Static Analysis - CppCheck
+## Static Analysis - CppCheck
 Use custom target `scheck` to perform static analysis using CppCheck utility.
 Run `make scheck` in the `./build` folder to start static analysis.
 
-### Unit tests
+## Unit tests
 Unit tests are using googletest framework
 Run `ctest -VV` in the `./build` folder to start tests.
 
-### Memory leaks detection
+## Memory leaks detection
 Memory leaks detection is made using Valgrind tool. 
 Run `ctest -T memcheck` in the `./build` folder to start memory check.
 
-### Installation
+## Installation
 Navigate to the build folder. 
 Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
 Run `make` to build the release. 
 Run `sudo make install` to install application. 
 Uou can use `CMAKE_INSTALL_PREFIX` to change the default installation location. 
+
+## Useful links
+  - https://cliutils.gitlab.io/modern-cmake/
