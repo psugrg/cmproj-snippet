@@ -9,7 +9,7 @@
  * - Run tests (verbose)
  *    ./build/ctest -VV
  * - Run Valgrind (memory leaks)
- *    ./build/ctest -T memchec
+ *    ./build/ctest -T memcheck
  *
  */
 class ExampleTests : public ::testing::Test

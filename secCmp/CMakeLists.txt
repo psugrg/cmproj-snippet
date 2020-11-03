@@ -15,3 +15,8 @@ target_include_directories(${PROJECT_NAME} PUBLIC
 
 # Add Tests
 add_subdirectory(test)
+
+# Install rules
+# NOTE: This is a static library hence no need of installing it. Let's install it anyhow as an example.
+install(TARGETS ${PROJ_NAME} DESTINATION lib)
+install(FILES inc/Example.hpp DESTINATION include)

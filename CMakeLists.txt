@@ -22,7 +22,9 @@ add_custom_target(cppcheck-analysis ALL
 
 # Compile options
 # TODO: Add more!
-add_compile_options("-Wall" "-Wextra" "-Wuninitialized" "-pedantic" "-Werror")
+add_compile_options("-Wall" "-Wextra" "-Wuninitialized")
+# It's much better to add more flags especially -pedantic and -Werror
+#add_compile_options("-Wall" "-Wextra" "-Wuninitialized" "-pedantic" "-Werror")
 
 # Add Internal Component
 add_subdirectory(mainCmp)

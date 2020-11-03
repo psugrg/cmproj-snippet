@@ -24,7 +24,7 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME} secCmp gtest gtest_main)
 
 # Install target configuration (needed by CTest)
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+# install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 
 # Add tests to CTest
 add_test(test_all ${PROJECT_NAME})
