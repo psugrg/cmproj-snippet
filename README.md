@@ -7,13 +7,13 @@ My very basic CMake project snippet
   - Code Formatting using Clang Format
   - Static analysis: CppCheck
   - Documentation: Doxygen
+  - Testing using Google Test framework
+  - memory leaks detection
 ### In Progress
   - installation.
 
   Installation kind of work. The problem is that it also install tests together with the googletest framework. 
 ### TODO
-  - Testing using Google Test framework (fix problems)
-  - memory leaks detection (verify if it still works)
   - Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
   - code coverage
   - packages

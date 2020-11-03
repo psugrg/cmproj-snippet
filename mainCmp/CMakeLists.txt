@@ -2,7 +2,7 @@
 # This is the CMakeLists.txt file containing the configuration of the mainCmp. 
 # It includes the main() function and creates executable file.
 
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 
 # Project name (name of this component)
 project(mainCmp)

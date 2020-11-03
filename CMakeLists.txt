@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.16)
 
 # Project name
 project(cmproj VERSION 0.1.0)
@@ -25,6 +25,10 @@ add_custom_target(cppcheck-analysis ALL
 add_compile_options("-Wall" "-Wextra" "-Wuninitialized")
 # It's much better to add more flags especially -pedantic and -Werror
 #add_compile_options("-Wall" "-Wextra" "-Wuninitialized" "-pedantic" "-Werror")
+
+ 
+# Include CTest enables testing and Valgrind support for memory leak detection
+include(CTest)
 
 # Add Internal Component
 add_subdirectory(mainCmp)

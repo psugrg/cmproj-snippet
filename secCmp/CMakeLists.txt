@@ -2,6 +2,8 @@
 # This is the CMakeLists.txt file containing the configuration of the secCmp. 
 # It is a library component included ny the mainCmp.
 
+cmake_minimum_required(VERSION 3.16)
+
 # The name of the project (library)
 project(secCmp)
 
