@@ -14,6 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # Static analysis done by CPP Check
+# (This will ignore the /usr/src/googletest directory)
 add_custom_target(scheck ALL
         COMMAND cppcheck 
                 --template=gcc 
@@ -21,7 +22,6 @@ add_custom_target(scheck ALL
                 --project=compile_commands.json)
 
 # Compile options
-# TODO: Add more!
 add_compile_options("-Wall" "-Wextra" "-Wuninitialized")
 # It's much better to add more flags especially -pedantic and -Werror
 #add_compile_options("-Wall" "-Wextra" "-Wuninitialized" "-pedantic" "-Werror")
