@@ -16,12 +16,9 @@ add_subdirectory(/usr/src/googletest ./googletest)
 # Create test executable
 add_executable(${PROJECT_NAME}
     test.cpp)
-   
+
 # Link required libraries
 target_link_libraries(${PROJECT_NAME} secCmp gtest gtest_main)
-
-# Install target configuration (needed by CTest)
-# install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 
 # Add tests to CTest
 gtest_discover_tests(${PROJECT_NAME})

@@ -1,21 +1,20 @@
 # Basic CMAKE project snippet
 My very basic CMake project snippet
 
-## Development Environment
-  - Development environment: https://github.com/psugrg/saden
-  - Build system CMake
-  - Code Formatting using Clang Format
-  - Static analysis: CppCheck
-  - Documentation: Doxygen
-  - Testing using Google Test framework
-  - memory leaks detection
-### In Progress
-### TODOInstallation kind of work. 
-  - Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
-  - Installation followup: The problem is that it also install tests together with the googletest framework. 
-  - code coverage
-  - packages
-  - flatpacs/appimages/etc
+## Development Environment TODO list
+  [x] Development environment: https://github.com/psugrg/saden
+  [x] Build system CMake
+  [x] Code Formatting using Clang Format
+  [x] Static analysis: CppCheck
+  [x] Documentation: Doxygen
+  [x] Testing using Google Test framework
+  [x] memory leaks detection
+  [x] Installation
+  [-] code coverage
+  [ ] Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
+  [ ] Installation followup: The problem is that it also install tests together with the googletest framework. 
+  [ ] packages
+  [ ] flatpacs/appimages/etc
 
 
 ## Clang Format
@@ -49,6 +48,13 @@ Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
 Run `make` to build the release. 
 Run `sudo make install` to install application. 
 Uou can use `CMAKE_INSTALL_PREFIX` to change the default installation location. 
+
+## Code Coverage
+Navigate to the build folder.
+Run `cmake -DCMAKE_BUILD_TYPE-Coverage ..` to configure coverage build.
+Run `make` to build the application.
+Run `ctest -VV` to test the application.
+Run `make coverage` to get the coverage results.
 
 ## Useful links
   - https://cliutils.gitlab.io/modern-cmake/

@@ -12,7 +12,7 @@ int main(void)
   // Static analysis demo:
   char tmp[10] = "test";
   // uncomment to test
-  tmp[11] = 's';
+  // tm""p[11] = 's';
   std::cout << tmp << std::endl;
   return 0;
 }
