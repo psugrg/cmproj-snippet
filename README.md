@@ -2,19 +2,19 @@
 My very basic CMake project snippet
 
 ## Development Environment TODO list
-  [x] Development environment: https://github.com/psugrg/saden
-  [x] Build system CMake
-  [x] Code Formatting using Clang Format
-  [x] Static analysis: CppCheck
-  [x] Documentation: Doxygen
-  [x] Testing using Google Test framework
-  [x] memory leaks detection
-  [x] Installation
-  [-] code coverage
-  [ ] Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
-  [ ] Installation followup: The problem is that it also install tests together with the googletest framework. 
-  [ ] packages
-  [ ] flatpacs/appimages/etc
+  - [x] Development environment: https://github.com/psugrg/saden
+  - [x] Build system CMake
+  - [x] Code Formatting using Clang Format
+  - [x] Static analysis: CppCheck
+  - [x] Documentation: Doxygen
+  - [x] Testing using Google Test framework
+  - [x] memory leaks detection
+  - [x] Installation
+  - [ ] code coverage
+  - [ ] Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
+  - [ ] Installation followup: The problem is that it also install tests together with the googletest framework. 
+  - [ ] packages
+  - [ ] flatpacs/appimages/etc
 
 
 ## Clang Format
