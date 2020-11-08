@@ -10,7 +10,7 @@ My very basic CMake project snippet
   - [x] Testing using Google Test framework
   - [x] memory leaks detection
   - [x] Installation
-  - [ ] code coverage
+  - [x] code coverage
   - [ ] Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
   - [ ] Installation followup: The problem is that it also install tests together with the googletest framework. 
   - [ ] packages
