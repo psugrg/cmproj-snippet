@@ -55,7 +55,7 @@ Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
 Run `make` to build the release. 
 Run `sudo make install` to install application. 
 Use `-DCMAKE_INSTALL_PREFIX=/path/to/install` as an argument for `cmake` to change the default installation location
-Use `-DINSTALL_GTEST=OFF` to prevent installing google tests with the application.
+Use `-DINSTALL_GTEST=OFF` to [prevent google tests installation](https://github.com/google/googletest/issues/2829) with the application.
 
 The example full build and installation:
 ```
