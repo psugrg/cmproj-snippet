@@ -11,8 +11,7 @@ My very basic CMake project snippet
   - [x] memory leaks detection
   - [x] Installation
   - [x] code coverage
-  - [ ] Documentation should not search in all folders of the project (it tries to parese build folder and release folder)
-  - [ ] Installation followup: The problem is that it also install tests together with the googletest framework. 
+  - [x] Installation followup: The problem is that it also install tests together with the googletest framework. 
   - [ ] packages
   - [ ] flatpacs/appimages/etc
 
@@ -47,7 +46,15 @@ Navigate to the build folder.
 Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
 Run `make` to build the release. 
 Run `sudo make install` to install application. 
-Uou can use `CMAKE_INSTALL_PREFIX` to change the default installation location. 
+Use `-DCMAKE_INSTALL_PREFIX=/path/to/install` as an argument for `cmake` to change the default installation location
+Use `-DINSTALL_GTEST=OFF` to prevent installing google tests with the application.
+
+The example full build and install commands
+```
+cmake -DCMAKE_INSTALL_PREFIX=/home/p/test-install -DCMAKE_BUILD_TYPE=Release -DINSTALL_GTEST=OFF ..
+make all
+make install
+```
 
 ## Code Coverage
 Navigate to the build folder.
