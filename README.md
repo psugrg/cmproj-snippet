@@ -49,8 +49,10 @@ Run `sudo make install` to install application.
 Use `-DCMAKE_INSTALL_PREFIX=/path/to/install` as an argument for `cmake` to change the default installation location
 Use `-DINSTALL_GTEST=OFF` to prevent installing google tests with the application.
 
-The example full build and install commands
+The example full build and installation:
 ```
+mkdir build
+cd build
 cmake -DCMAKE_INSTALL_PREFIX=/home/p/test-install -DCMAKE_BUILD_TYPE=Release -DINSTALL_GTEST=OFF ..
 make all
 make install
