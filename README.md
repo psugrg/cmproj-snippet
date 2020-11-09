@@ -30,8 +30,9 @@ Hit `Ctrl+Shift+P` and search for `Open User Settings`.
 Search for `format` and select `Editor: Format On Save`.
 
 ## Static Analysis - CppCheck
-Use custom target `scheck` to perform static analysis using CppCheck utility.
-Run `make scheck` in the `./build` folder to start static analysis.
+Static analysis is done using [cppcheck](https://github.com/danmar/cppcheck) tool. 
+Custom target `scheck` is handling the static analysis process. This target is a part of the `ALL` group which means that it'll be run automatically by make when `make` or `make all` command is executed. 
+Run `make scheck` in the `./build` folder to start static analysis manually.
 
 ## Unit tests
 Unit tests are using googletest framework
@@ -40,6 +41,13 @@ Run `ctest -VV` in the `./build` folder to start tests.
 ## Memory leaks detection
 Memory leaks detection is made using Valgrind tool. 
 Run `ctest -T memcheck` in the `./build` folder to start memory check.
+
+## Code Coverage
+Navigate to the build folder.
+Run `cmake -DCMAKE_BUILD_TYPE-Coverage ..` to configure coverage build.
+Run `make` to build the application.
+Run `ctest -VV` to test the application.
+Run `make coverage` to get the coverage results.
 
 ## Installation
 Navigate to the build folder. 
@@ -57,13 +65,6 @@ cmake -DCMAKE_INSTALL_PREFIX=/home/p/test-install -DCMAKE_BUILD_TYPE=Release -DI
 make all
 make install
 ```
-
-## Code Coverage
-Navigate to the build folder.
-Run `cmake -DCMAKE_BUILD_TYPE-Coverage ..` to configure coverage build.
-Run `make` to build the application.
-Run `ctest -VV` to test the application.
-Run `make coverage` to get the coverage results.
 
 ## Useful links
   - https://cliutils.gitlab.io/modern-cmake/
