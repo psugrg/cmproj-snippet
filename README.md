@@ -1,5 +1,6 @@
 # Basic CMAKE project snippet
-This is a basic Cmake project snippet for x86 linux based applications. It tries to cover most of the most important topics in project development in the minimal but functional form. This minimal approach helps with understanding the topic.
+This is a basic Cmake project snippet for x86 linux based applications. It tries to cover most of the most important 
+topics in project development in the minimal but functional form. This minimal approach helps with understanding the topic.
 
 ## TODO 
   - [x] Development environment: https://github.com/psugrg/saden
@@ -14,7 +15,8 @@ This is a basic Cmake project snippet for x86 linux based applications. It tries
   - [ ] flatpak/appimage/snap
 
 ## Development Environment
-This *CMake project snippet* is designed to run on the [SADEN](https://github.com/psugrg/saden) development environment where all requirements are installed. 
+This *CMake project snippet* is designed to run on the [SADEN](https://github.com/psugrg/saden) 
+development environment where all requirements are installed. 
 However it should work on any linux system assuming the required dependencies are installed. 
 
 ## Code Formatting
@@ -32,42 +34,42 @@ Custom target `scheck` is handling the static analysis process. This target is a
 which means that it'll be run automatically by make when `make` or `make all` command is executed. 
 
 ### Usage
-Run `make scheck` in the `./build` folder to start static analysis manually.
+- Run `make scheck` in the `./build` folder to start static analysis manually.
 
 ## Unit tests
 Unit tests are using [GoogleTest](https://github.com/google/googletest) framework.
 This project uses an installed version of the *GoogleTest* framework.
 
 ### Usage
-Run `ctest -VV` in the `./build` folder to start tests.
+- Run `ctest -VV` in the `./build` folder to start tests.
 
 ## Memory leaks detection
 Memory leaks detection is made using [Valgrind](https://valgrind.org/) utility. 
 
 ### Usage
-Run `ctest -T memcheck` in the `./build` folder to start memory check.
+- Run `ctest -T memcheck` in the `./build` folder to start memory check.
 
 ## Code Coverage
 Code coverage analysis is done using the [gcov](https://gcc.gnu.org/onlinedocs/gcc/Gcov.html) 
 as the coverage testing utility and the [gcovr](https://github.com/gcovr/gcovr) for presentation. 
 
 ### Usage
-Navigate to the build folder.
-Run `cmake -DCMAKE_BUILD_TYPE-Coverage ..` to configure coverage build.
-Run `make` to build the application.
-Run `ctest -VV` to test the application.
-Run `make coverage` to get the coverage results.
+- Navigate to the build folder.
+- Run `cmake -DCMAKE_BUILD_TYPE-Coverage ..` to configure coverage build.
+- Run `make` to build the application.
+- Run `ctest -VV` to test the application.
+- Run `make coverage` to get the coverage results.
 
 ## Installation
 Installation is done via the built-in CMake installation mechanism.
 
 ### Usage
-Navigate to the build folder. 
-Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
-Run `make` to build the release. 
-Run `sudo make install` to install application. 
-Use `-DCMAKE_INSTALL_PREFIX=/path/to/install` as an argument for `cmake` to change the default installation location
-Use `-DINSTALL_GTEST=OFF` to [prevent google tests installation](https://github.com/google/googletest/issues/2829) with the application.
+- Navigate to the build folder. 
+- Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
+- Run `make` to build the release. 
+- Run `sudo make install` to install application. 
+- Use `-DCMAKE_INSTALL_PREFIX=/path/to/install` as an argument for `cmake` to change the default installation location
+- Use `-DINSTALL_GTEST=OFF` to [prevent google tests installation](https://github.com/google/googletest/issues/2829) with the application.
 
 The example full build and installation:
 ```
