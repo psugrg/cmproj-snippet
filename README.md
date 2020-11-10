@@ -22,11 +22,6 @@ Code formatting is based on [clang-format](https://clang.llvm.org/docs/ClangForm
 It uses the `./.clang-format` file containing the style configuration.
 The code formatting operation will not be triggered by build but can be manually/automatically triggered by the IDE.
 
-### Install clang-format
-This step is necessary only if *SDEN* is not used.
-
-Run `sudo apt install clang-format` on debian-like distributions. 
-
 ### Configuration in VS Code
 Hit `Ctrl+Shift+P` and search for `Open User Settings`.
 Search for `format` and select `Editor: Format On Save`.
@@ -41,7 +36,7 @@ Run `make scheck` in the `./build` folder to start static analysis manually.
 
 ## Unit tests
 Unit tests are using [GoogleTest](https://github.com/google/googletest) framework.
-Note - this project snippet makes use of an installed version of the GoogleTest framework (inside the SADEN docker).
+This project uses an installed version of the *GoogleTest* framework.
 
 ### Usage
 Run `ctest -VV` in the `./build` folder to start tests.
