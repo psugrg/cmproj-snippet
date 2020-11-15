@@ -73,9 +73,10 @@ add_custom_target(scheck ALL
                 --project=compile_commands.json
         VERBATIM)
 
+# AppImage preparation: 
 # Generate Desktop file (needed by AppImage)
 configure_file(desktop.in ${app_name}.desktop)
 # Install Desktop file
 install(FILES ${PROJECT_BINARY_DIR}/cmproj.desktop DESTINATION share/applications)
-# Install example icon
+# Install icon
 install(FILES twotone_pest_control_rodent_black_18dp.png DESTINATION share/pixmaps)
