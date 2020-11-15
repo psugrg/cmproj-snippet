@@ -2,18 +2,6 @@
 This is a basic Cmake project snippet for x86 linux based applications. It tries to cover most of the most important 
 topics in project development in the minimal but functional form. This minimal approach helps with understanding the topic.
 
-## TODO 
-  - [x] Development environment: https://github.com/psugrg/saden
-  - [x] Build system CMake
-  - [x] Code Formatting using Clang Format
-  - [x] Static analysis: CppCheck
-  - [x] Documentation: Doxygen
-  - [x] Testing using Google Test framework
-  - [x] memory leaks detection
-  - [x] Installation
-  - [x] code coverage
-  - [ ] flatpak/appimage/snap
-
 ## Development Environment
 This *CMake project snippet* is designed to run on the [SADEN](https://github.com/psugrg/saden) 
 development environment where all requirements are installed. 
