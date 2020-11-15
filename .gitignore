@@ -2,3 +2,5 @@ build
 release
 .vscode
 *.sh
+!make-appimage.sh
+*.AppImage

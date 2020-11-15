@@ -68,17 +68,20 @@ Installation is done via the built-in CMake installation mechanism.
 - Run `cmake -DCMAKE_BUILD_TYPE=Release ..` to configure release build.
 - Run `make` to build the release. 
 - Run `sudo make install` to install application. 
-- Use `-DCMAKE_INSTALL_PREFIX=/path/to/install` as an argument for `cmake` to change the default installation location
+- Use `-DCMAKE_INSTALL_PREFIX=/new/prefix` if you want to change the default `/usr/local/` installation directory prefix.
 - Use `-DINSTALL_GTEST=OFF` to [prevent google tests installation](https://github.com/google/googletest/issues/2829) with the application.
 
 The example full build and installation:
 ```
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=/home/p/test-install -DCMAKE_BUILD_TYPE=Release -DINSTALL_GTEST=OFF ..
+cmake -DCMAKE_INSTALL_PREFIX=/tmp/test-install -DCMAKE_BUILD_TYPE=Release -DINSTALL_GTEST=OFF ..
 make all
 make install
 ```
+## AppImage
+The AppImage creation process description can be found on the [AppImage documentation](https://docs.appimage.org/packaging-guide/index.html) pages. 
+The best starting point for the CMake based projects is the [build-with-cmake.sh](https://docs.appimage.org/packaging-guide/from-source/native-binaries.html#id2) script explained there. 
 
 ## Useful links
   - https://cmake.org/cmake/help/latest/guide/tutorial/index.html

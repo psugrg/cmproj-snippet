@@ -72,3 +72,6 @@ add_custom_target(scheck ALL
                 -i/usr/src/googletest 
                 --project=compile_commands.json
         VERBATIM)
+
+install(FILES cmproj.desktop DESTINATION share/applications)
+install(FILES twotone_pest_control_rodent_black_18dp.png DESTINATION share/pixmaps)
