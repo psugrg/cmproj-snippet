@@ -14,6 +14,7 @@ add_executable(${app_name}
 
 # Add include directories of this component
 target_include_directories(${app_name} PUBLIC 
+    ${PROJECT_BINARY_DIR}/inc
     ${PROJECT_SOURCE_DIR}/inc
 )
 
@@ -26,7 +27,7 @@ set(coverage_files_dir
     PARENT_SCOPE)
 
 # Generate Version header file
-configure_file(inc/Version.h.in ${PROJECT_SOURCE_DIR}/inc/Version.h)
+configure_file(inc/Version.h.in ${PROJECT_BINARY_DIR}/inc/Version.h)
 
 # Link required libraries
 target_link_libraries(${app_name} PUBLIC secCmp)
