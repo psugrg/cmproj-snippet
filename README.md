@@ -71,7 +71,7 @@ make install
 The AppImage creation process description can be found on the [AppImage documentation](https://docs.appimage.org/packaging-guide/index.html) pages. 
 The best starting point for the CMake based projects is the [build-with-cmake.sh](https://docs.appimage.org/packaging-guide/from-source/native-binaries.html#id2) script explained there. 
 
-The modified version of this script has been added to this project as `make-appimage.sh`.
+The adapted version of this script has been added to this project as `make-appimage.sh`.
 
 ### Usage
 - Run `./make-appimage.sh` to generate Appimage of this application.
