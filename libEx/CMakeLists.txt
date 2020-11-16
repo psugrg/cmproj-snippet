@@ -1,11 +1,11 @@
 ##
-# This is the CMakeLists.txt file containing the configuration of the secCmp. 
-# It is a library component included by the mainCmp.
+# Library Example component configuration.
+# Creates and installs a library
 
 cmake_minimum_required(VERSION 3.16)
 
 # The name of the library
-project(secCmp)
+project(libEx)
 
 # Creates a library 
 add_library(${PROJECT_NAME} src/Example.cpp)

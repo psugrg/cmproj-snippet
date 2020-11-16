@@ -1,16 +1,16 @@
 ##
-# This is the CMakeLists.txt file containing the configuration of the mainCmp. 
+# Object Library Example component configuration.
 # It includes the main() function and creates an Object library that can be used 
 # to create executable.
 
 cmake_minimum_required(VERSION 3.16)
 
 # The name of the library
-project(mainCmp)
+project(objLibEx)
 
 # Add Object library 
 add_library(${PROJECT_NAME} OBJECT
-    src/cmproj.cpp
+    src/Main.cpp
 )
 
 # Add include directories of this component
