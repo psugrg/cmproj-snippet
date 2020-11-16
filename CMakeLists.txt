@@ -3,9 +3,6 @@ cmake_minimum_required(VERSION 3.16)
 # Project name
 project(cmproj VERSION 0.1.0)
 
-# Set the name for the executable
-set(app_name ${PROJECT_NAME})
-
 # C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
@@ -52,7 +49,7 @@ message("* Current build type is : ${CMAKE_BUILD_TYPE}")
 # Include CTest enables testing and Valgrind support for memory leak detection
 include(CTest)
 
-# Add Internal Component
+# Add Internal Components
 add_subdirectory(mainCmp)
 add_subdirectory(secCmp)
 add_subdirectory(doc)
@@ -73,9 +70,18 @@ add_custom_target(scheck ALL
                 --project=compile_commands.json
         VERBATIM)
 
-# AppImage preparation: 
+# Create application
+# Add executable using OBJECTS library 
+# https://cmake.org/cmake/help/v4.4/command/add_library.html#id4
+add_executable(${PROJECT_NAME} $<TARGET_OBJECTS:mainCmp>)
+# Link required libraries
+target_link_libraries(${PROJECT_NAME} PUBLIC secCmp)
+# Install target configuration
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+
+# Needed by AppImage: 
 # Generate Desktop file (needed by AppImage)
-configure_file(desktop.in ${app_name}.desktop)
+configure_file(desktop.in ${PROJECT_NAME}.desktop)
 # Install Desktop file
 install(FILES ${PROJECT_BINARY_DIR}/cmproj.desktop DESTINATION share/applications)
 # Install icon
