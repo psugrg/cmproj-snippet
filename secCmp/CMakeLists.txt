@@ -22,7 +22,7 @@ set(coverage_files_dir
     PARENT_SCOPE)
 
 # Add Tests
-# add_subdirectory(test)
+add_subdirectory(test)
 
 # Install rules
 # NOTE: This is a static library hence no need of installing it. Let's install it anyhow as an example.
