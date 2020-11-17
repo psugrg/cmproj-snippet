@@ -1,6 +1,19 @@
 # Basic CMAKE project snippet
 This is a basic Cmake project snippet for x86 linux based applications. It tries to cover most of the most important 
 topics in project development in the minimal but functional form. This minimal approach helps with understanding the topic.
+The project intentionally contains some *bugs* in code to show that the verification works. 
+
+## Folder structure
+The project contains of three folders: *doc*, *objLibEx* and *libEx*.
+
+### doc
+This folder contains the example of Doxygen documentation.
+
+### objLibEx
+This folder contains an example of the Object library. It contains the *main* function but doesn't create an application. It is created by the top level CMakeLists.txt file instead. 
+
+### libEx
+This folder contains an example of the library, GoogleTests and library installation. 
 
 ## Development Environment
 This *CMake project snippet* is designed to run on the [SADEN](https://github.com/psugrg/saden) 
