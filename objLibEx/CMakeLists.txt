@@ -13,6 +13,9 @@ add_library(${PROJECT_NAME} OBJECT
     src/Main.cpp
 )
 
+# Link required libraries
+target_link_libraries(${PROJECT_NAME} PUBLIC libEx)
+
 # Add include directories of this component
 target_include_directories(${PROJECT_NAME} PUBLIC 
     ${PROJECT_BINARY_DIR}/inc
