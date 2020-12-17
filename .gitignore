@@ -4,3 +4,4 @@ release
 *.sh
 !make-appimage.sh
 *.AppImage
+cmake-build*
