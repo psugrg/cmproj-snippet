@@ -5,3 +5,6 @@ release
 !make-appimage.sh
 *.AppImage
 cmake-build*
+compile_commands.json
+.vimspector.json
+.cache
