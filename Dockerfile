@@ -4,27 +4,28 @@ FROM ubuntu:22.04 AS base
 # It's also better than setting DEBIAN_FRINTEND=noninteractive since, in dev-environment
 # somtimes interactive tools are needed.
 ENV TZ=Europe/Warsaw
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN ln -snf /usr/share/zoneinfo/"$TZ" /etc/localtime && echo "$TZ" > /etc/timezone
 
 # Install packages
 RUN apt-get update && apt-get install -y \
-    make \
-    cmake \
-    g++ \
-    gcc \
-    gdb \
-    git \
     clang \
     clang-format \
     clang-tidy \
     clang-tools \
+    cmake \
     cppcheck \
-    googletest \
     doxygen \
+    g++ \
+    gcc \
+    gdb \
+    git \
+    googletest \
     graphviz \
+    make \
     python3 \
     python3-pip \
-    wget 
+    wgetk \
+    && apt-get clean
 
 # Istall Gcovr gcov data presentation tool
 # https://github.com/gcovr/gcovr
