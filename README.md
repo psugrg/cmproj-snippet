@@ -26,12 +26,23 @@ CMakeLists.txt file instead.
 This folder contains an example of the library, GoogleTests and library
 installation.
 
-## Development Environment
+## Development environment
 
-This *CMake project snippet* is designed to run on the
-[SADEN](https://github.com/psugrg/saden) development environment where all
-requirements are installed. However it should work on any linux system assuming
-the required dependencies are installed.
+The project can be compile using the Docker-based development environment.
+
+### Create Docker image
+
+> [!IMPORTANT]
+>
+> - Export `UID` to expose the user id as an environment variable by calling `export UID=${UID}`[^1].
+
+Run the following command to compile and run the complete suite
+
+```sh
+docker compose build && docker compose up -d
+```
+
+[^1]: This should be done even if there's an automatic Bash `UID` read only variable present since it is ignored by the docker.
 
 ## Code Formatting
 
@@ -83,7 +94,7 @@ utility and the [gcovr](https://github.com/gcovr/gcovr) for presentation.
 ### Code Coverage Usage
 
 - Navigate to the build folder.
-- Run `cmake -DCMAKE_BUILD_TYPE-Coverage ..` to configure coverage build.
+- Run `cmake -DCMAKE_BUILD_TYPE=Coverage ..` to configure coverage build.
 - Run `make` to build the application.
 - Run `ctest -VV` to test the application.
 - Run `make coverage` to get the coverage results.
