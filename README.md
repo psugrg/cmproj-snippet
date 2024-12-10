@@ -68,6 +68,10 @@ by make when `make` or `make all` command is executed.
 
 - Run `make scheck` in the `./build` folder to start static analysis manually.
 
+### SonarQube
+
+[SonarQube](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode) is a very usefull on-the-fly static analysis tool for your Visual Studio Code. 
+
 ## Unit Tests
 
 Unit tests are using [GoogleTest](https://github.com/google/googletest)
